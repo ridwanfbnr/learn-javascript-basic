@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Rest Parameter</title>
+</head>
+<body>
+    
+    <script>
+
+        //  Rest Parameter
+        function sum(name, ...data) {
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            document.writeln(`<p>Total ${name} is ${total}</p>`)
+        }
+
+        sum("Orange", 10, 15, 20, 25, 30);
+        sum("Apple", 10, 20, 30, 40, 50);
+        sum("Banana", 20, 40, 60, 80, 100);
+
+        //  Spread Syntax di Rest Parameter
+        const values = [10, 10, 10, 10, 10];
+        sum("Spread Syntax", ...values);
+
+
+        
+
+        
+        /*  
+            Arguments Object
+        -   Sebelum ada fitur rest parameter, di JavaScript sudah ada fitur yang bernama
+            Arguments Object
+        -   Ini adalah fitur dimana kita bisa mengambil semua parameter dalam bentuk array
+            dengan menggunakan object yang bernama arguments
+        -   Arguments secara otomatis bisa digunakan di function
+        -   Namun perlu diingat, bahwa untuk JavaScript saat ini, lebih baik disarankan
+            menggunakan rest parameter dibanding arguments object
+        
+        */
+
+        function oldSum() {
+            let total = 0;
+            for (const argumen of arguments) {
+                total += argumen;
+            }
+            document.writeln(`<p>Total Arguments is ${total}</p>`)
+        }
+
+        oldSum(1,2,3,4,5);
+
+
+    </script>
+
+</body>
+</html>

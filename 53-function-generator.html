@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+<body>
+    
+    <script>
+
+        //  Function Generator Sederhana
+        function* createNames() {
+            yield "Eko";
+            yield "Kurniawan";
+            yield "Khannedy";
+        }
+
+        const names = createNames();
+        for (const name of names) {
+            console.info(name);
+        }
+
+
+
+        //  Function Generator Kompleks
+        //  Lazy
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yield Ganjil Generator ${i}`);
+                    yield i;
+                }
+            }
+        }
+        
+        const valueGanjil = buatGanjil(50);
+        for (const value of valueGanjil) {
+            console.info(value);
+        }
+        
+
+
+
+
+        //  Lazy Generator
+        function* buatGanjilLazyGenerator(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yield Ganjil Lazy Generator ${i}`);
+                    yield i;
+                }
+            }
+        }
+        
+        const valueGanjilLazyGenerator = buatGanjilLazyGenerator(50);
+
+        console.info(valueGanjilLazyGenerator.next().value);
+        console.info(valueGanjilLazyGenerator.next().value);
+        console.info(valueGanjilLazyGenerator.next().value);
+        
+
+        
+        
+        //  Eager
+        function buatGenapArray(value) {
+            const result = [];
+            for (i = 1; i <= value; i++) {
+                if (i % 2 === 0) {
+                    console.info(`Yield Genap Array ${i}`);
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        const valueGenapArray = buatGenapArray(50);
+        for (const value of valueGenapArray) {
+            console.info(value);
+        }
+
+
+
+
+        </script>
+
+</body>
+</html>

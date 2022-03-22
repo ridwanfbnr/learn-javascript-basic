@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>False dan Truthy</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+            Data Falsy
+
+            Data dianggap Falsy     -   Keterangan
+            false                   -   Boolean False
+            0, -0                   -   Number 0 dan -0 dianggap False
+            "", '', ``              -   Semua String Kosong dianggap False
+            null                    -   null dianggap False
+            undefined               -   undefined dianggap False
+            NaN                     -   Not a Number dianggap False
+
+        */
+
+        // Falsy dan Truthy
+        // let data = 50; // True
+        let data = ""; // False
+
+        if (data) {
+            document.writeln("TRUE");
+        } else {
+            document.writeln("FALSE");
+        }
+
+    </script>
+
+</body>
+</html>

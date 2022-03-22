@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    
+    <script>
+
+        //  Global Scope
+        let counter = 0;
+
+        //  function hitMe adalah Global Scope, bisa diakses dimana saja
+        function hitMe() {
+            // Local Scope hitme, didalam tanda kurung kurawal adalah local scope hitme
+            counter++;
+        }
+
+        hitMe();
+        hitMe();
+
+        console.info(counter);
+
+
+
+        //  Local Scope
+
+        function first() {
+            // Local Scope First
+            let firstVariable = "firstValue";
+
+            // Nested Function Scope
+            function firstValue() {
+                console.info(firstVariable);
+            }
+
+            firstValue();
+
+        }
+
+        function second() {
+            // Local Scope Second
+            let secondVariable = "second";
+            // console.info(firstVariable); // ERROR
+        }
+
+        first();
+        second();
+        
+        // console.info(firstVariable); // ERROR
+        // console.info(secondVariable); // ERROR
+
+        
+
+
+    </script>
+
+</body>
+</html>

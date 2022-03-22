@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Typeof</title>
+</head>
+<body>
+    
+    <script>
+
+        // Operator Typeof
+        const person = "andi";
+        
+        const typeData = typeof person;
+        document.writeln(`<p>${typeData}</p>`);
+
+
+        // Operator Typeof in if statement
+        const data = 100;
+        
+        if (typeof data === "string") {
+            document.writeln("<p>STRING</p>")
+        } else if (typeof data === "number") {
+            document.writeln("<p>NUMBER</p>")
+        } else if (typeof data === "boolean") {
+            document.writeln("<p>BOOLEAN</p>")
+        } else if (typeof data === "object") {
+            document.writeln("<p>OBJECT</p>")
+        } else {
+            document.writeln("<p>NOT</p>")
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+    
+    <script>
+
+        // Membuat Array
+        let arrayKosong = [];
+
+        let arrayNama = ["Ridwan", "Febnur"];
+
+        // Menambah Array
+        const names = [];
+        names.push("Ridwan");
+        names.push("Febnur", "Asri", "Redinda");
+        names.push("Programmer", "Zaman", "Now");
+
+        console.table(names);
+
+        /*
+            OPERASI DI ARRAY
+
+            Operasi                 -       Keterangan
+            array.push(value)       -       Untuk menambahkan data ke array
+            array.length            -       Unutk mendapatkan pangjang array
+            array[index]            -       Untuk mendapatkan data diposisi index
+            array[index] = value    -       Untuk mengubah data diposisi index
+            delete array[index]     -       Menghapus data diposisi index, dan index tidak tergeser
+        */
+
+        // Operasi Di Array
+        // Operasi untuk mendapatkan data diposisi index
+        console.info(names[0]);
+        console.info(names[1]);
+        console.info(names[2]);
+        console.info(names[3]);
+
+        // Operasi untuk mengubah data diposisi index
+        names[0] = "Eko";
+        names[1] = "Kurniawan";
+        names[2] = "Khannedy";
+
+        console.table(names);
+
+        // Operasi untuk menghapus data diposisi index
+        delete names[3];
+
+        console.table(names);
+
+        // Operasi untuk menambahkan data ke index yang di delete sebelumnya
+        names[3] = "Data Baru, Sebelumya di Delete";
+        // Operasi untuk memasukkan array ke dalam array, jika mau atau dibutuhkan
+        names.push(["Array", "Di dalam", "Array"]);
+
+        console.table(names);
+
+
+    </script>
+
+</body>
+</html>

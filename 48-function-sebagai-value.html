@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Sebagai Value</title>
+</head>
+<body>
+    
+    <script>
+
+        //  Function Di Variable
+        function sayHello(name) {
+            document.writeln(`<p>Hello ${name}!</p>`);
+        }
+
+        sayHello("Eko");
+
+        //  Function sayHello di dalam variable say
+        const say = sayHello;
+        say("Budi");
+
+
+        //  Function di Dalam Parameter
+        function giveMeName(names) {
+            names("Eko2");
+        } // names dianggap function
+
+        giveMeName(sayHello);
+        giveMeName(say);
+
+
+
+
+
+        //  Latihan
+        function person(name) {
+            document.writeln(`<p>${name}</p>`);
+        }
+
+        person("Programmer Zaman Now");
+
+        const resultPerson = person;
+        resultPerson("Belajar JavaScript");
+
+            function identitas(fullName) {
+                fullName("Belajar Function di Dalam Parameter");
+            } // fullName dianggap Function
+
+            identitas(person);
+            identitas(resultPerson);
+
+
+        
+            //  Anonymous function di parameter
+            identitas(function (valueName) {
+                document.writeln(`<p>${valueName}</p>`);
+            })
+
+
+    </script>
+
+</body>
+</html>

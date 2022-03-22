@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+
+    <script>
+
+        /*
+            VARIABLE
+        -   Variable adalah tempat untuk menyimpan data
+        -   Dengan menyimpan data di variable, kita bisa menggunakannya lagi dengan
+            menyebutkan nama variablenya
+        -   Untuk membuat variable di javascript, kita bisa menggunakan kata kunci 
+            var diikuti dengan nama variablenya
+        -   Javascript adalah dynamic language, artinya variable di Javascript tidak
+            terpaku harus menggunakan satu tipe data. Kita bisa mengubah ubah tipe
+            data di variable yang sama
+        */
+            var fullName;
+
+            
+        /*
+            Mengubah Value di Variable
+        -   Setelah variable di deklarasikan, kita bisa mengubah value atau nilai di dalam variable tersebut
+        -   Untuk Mengubah nya, kita bisa menggunakan printah nama variable diikuti
+            dengan tanda = atau sama dengan, lalu di ikuti dengan value atau nilainya
+        */
+            fullName = "Ridwan Febnur";
+            fullName = "Febnur Ridwan";
+
+
+        /*
+            Membuat Variable Langsung Dengan Value
+        -   Di JavaScript juga kita bisa mendeklarasikan sebuah variable, langsung dengan isi value nya
+        -   Cara nya kita bisa menggunakan kata kunci var, diikuti dengan nama variable,
+            lalu diikuti dengan tanda = atau sama dengan, dan diikuti dengan value atau nilainya
+        */
+            var fullName = "Ridwan Febnur";
+
+
+        /*
+            Mengakses Variable
+        -   Salah satu keuntungan menggunakan variable adalah variable bisa digunakan kembali
+        -   Hal ini akan mempermudahkan ketika membutuhkan daya yang sama berkali-kali
+        -   Untuk mengakses variable, kita cukup menyebutkan nama variable nya
+        */
+            var fullName = "Ridwan Febnur Asri Redinda";
+            var firstName = "Ridwan Febnur";
+            var lastName = "Asri Redinda";
+
+            document.writeln(fullName);
+            document.writeln("<br>");
+            document.writeln(fullName);
+            document.writeln("<br>");
+            document.writeln(fullName);
+
+            fullName = "Ridwan Febnur";
+            
+            document.writeln("<br>");
+            document.writeln(fullName);
+            document.writeln("<br>");
+            document.writeln(fullName);
+            document.writeln("<br>");
+
+
+
+    </script>
+
+</body>
+</html>

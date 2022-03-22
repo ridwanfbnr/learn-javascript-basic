@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    
+    <script>
+
+        // MENGAMBIL VARIABEL
+        const fullName = "Ridwan Febnur Asri Redinda";
+        const template = `Name : ${fullName}`;
+
+        console.info(template);
+
+
+        // EXPRESSION DI STRING TEMPLATE
+        const nilai = 80;
+        const template2 = `Nama : ${fullName}, Nilai : ${nilai > 75}`;
+
+        console.info(template2);
+
+
+        // MULTILINE
+        const multiLine = `Nama saya Ridwan,
+Saya sedang belajar JavaScript,
+di Programmer Zaman Now.`;
+
+        document.writeln("<pre>");
+        document.writeln(multiLine);
+        document.writeln("<pre>");
+
+    </script>
+
+</body>
+</html>

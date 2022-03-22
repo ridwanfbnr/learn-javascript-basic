@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    
+    <script>
+
+        // Membuat Object Kosong
+        const person = {};
+
+        // Menambah atau Mengubah Property di Object
+        person["nama"] = "Ridwan Febnur";
+        person["alamat"] = "Indonesia";
+        person["umur"] = 20;
+
+        console.table(person);
+
+        // Menghapus Property di Object
+        delete person["umur"];
+
+        console.table(person);
+
+        // Membuat Object dengan Property
+        const orang = {
+            "nama lengkap" : "Ridwan Febnur AR",
+            alamat : "Padang",
+            umur   : 20
+        }; // tanda " petik dua pada nama bisa di gunakan bila string lebih dari 1 kata
+
+        console.table(orang);
+
+        // Mengakses Property di Object
+        console.info(`Nama : ${orang["nama lengkap"]}`);
+        // Apabila Property lebih dari satu kata bisa menggunakan kurung siku untuk mengakses
+        console.info(`Alamat : ${orang.alamat}`);
+        console.info(`Umur : ${orang.umur}`);
+
+    </script>
+
+</body>
+</html>

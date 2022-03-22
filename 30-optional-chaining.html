@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining</title>
+</head>
+<body>
+    
+    <script>
+
+        // Error Mengakses Property Nullish
+        /*  
+            const person = {};
+
+            let country = person.addres.country;
+
+            document.writeln(`<p>${country}</p>`);
+
+        */
+
+        
+        // Pengecekan saat manggunakan if
+        // contoh pertama
+        const person = {};
+
+        let country;
+        if (person.addres !== undefined && person.addres !== null) {
+            country = person.addres.country;
+        }
+
+            document.writeln(`<p>${country}</p>`);
+
+        // contoh kedua 
+        /*
+            const nilai = {};
+
+            let nilaiValue;
+            if (nilai.person !== undefined && nilai.person !== null) {
+                nilaiValue = nilai.person.value;
+            }
+
+                document.writeln(`<p>${nilaiValue}</p>`);
+
+        */
+
+        // Menggunakan Optional Chaining dari contoh kedua
+        const nilai = {
+            person: {
+                value: 90
+            }
+        };
+
+        let nilaiValue = nilai?.person?.value;
+
+        document.writeln(`<p>${nilaiValue}</p>`);
+
+
+    </script>
+
+</body>
+</html>

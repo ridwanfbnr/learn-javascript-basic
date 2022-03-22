@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String Dan Number</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+            MELAKUKAN KONVERSI STRING DAN NUMBER
+
+            Function            -   Keterangan
+            parseInt(string)    -   Mengkonversi dari string ke number (Bilangan Bulat)
+            parseFloat(string)  -   Mengkonversi dari string ke number (Bilangan Pecahan)
+            Number(string)      -   Mengkonversi dari string ke number (Bilangan Bulat/Pecahan)
+            number.toString()   -   Mengkonversi dari number ke string
+
+        */
+
+        // Masalah Tanpa Konversi
+        const value1 = ("1");
+        const value2 = 1;
+        const sum = value1 + value2;
+
+        document.writeln(`<p>${sum}</p>`);
+
+        // Konversi String Ke Number
+        document.writeln(`<p>${parseInt("1.9")}</p>`);
+        document.writeln(`<p>${parseFloat("1.1")}</p>`);
+        document.writeln(`<p>${Number("1.1")}</p>`);
+
+
+        const a = 1;
+        const b = 2;
+        const total = a.toString() + b.toString();
+
+        document.writeln(`<p>${total}</p>`);
+
+        // NaN (Not a Number) "Hanya akan mentolelir kesalahan pada data terakhir"
+        document.writeln(`<p>${parseInt("1.1satu")}</p>`);
+        document.writeln(`<p>${parseFloat("1.2dua")}</p>`);
+
+        // Number() tidak akan mentolelir kesalahan pada data
+        document.writeln(`<p>${Number("1satu")}</p>`);
+        document.writeln(`<p>${Number("2dua")}</p>`);
+
+        // Operasi Pada NaN
+        const first = Number("satu"); // NaN
+        const totalNumber = first + 100;
+        document.writeln(`<p>${totalNumber}</p>`);
+
+        // isNaN() Function
+        document.writeln(`<p>${isNaN(first)}</p>`); // True
+        document.writeln(`<p>${isNaN(100)}</p>`); // False
+
+
+    </script>
+
+</body>
+</html>

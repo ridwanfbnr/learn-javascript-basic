@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Arrow</title>
+</head>
+<body>
+    
+    <script>
+
+        /*  
+            Arrow Function 
+        
+        -   Arrow Function adalah alternatif pembuatan function yang lebih sederhana
+            dari function biasa nya
+        -   Namun terdapat limitasi dan juga tidak bisa digunakan disemua situasi
+        -   Dinamakan Arrow Function karena menggunakan tanda => (Seperti Panah)
+        -   Berikut beberapa kekurangan arrow function
+            - tidak memiliki fitur arguments object
+            - tidak bisa menggunakan function generator
+            - tidak bisa mengakses this (yang nanti akan dibahas di function  di object)
+            - tidak bisa mengakses super (yang nanti akan dibahas di JavaScript OOP)
+        
+        */
+
+
+        //  Arrow Function
+        const sayHello = (name) => {
+            const say = `Hello ${name}!`;
+            console.info(say);
+        }
+
+        sayHello("Ridwan")
+
+        
+        //  Arrow Function Tanpa Block
+        const hello = (name) => console.info(`${name}!`);
+
+        hello("Arrow Funtion Tanpa Block")
+
+
+        //  Arrow Function Return Value
+        const sum = (first, second) => first + second;
+
+        console.info(sum(10, 10));
+
+
+        //  Arrow Function Sebagai Parameter
+        function giveMeName (callback) {
+            callback("Eko")
+        }
+
+        giveMeName(name => console.info(`Hello ${name}`));
+        
+
+    </script>
+
+</body>
+</html>
